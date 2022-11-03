@@ -1,5 +1,6 @@
-require('dotenv').config();
-
+// https://stackoverflow.com/questions/42335016/dotenv-file-is-not-loading-environment-variables
+const path = require('path')
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const Sequelize = require('sequelize');
 
 const sequelize = process.env.JAWSDB_URL
